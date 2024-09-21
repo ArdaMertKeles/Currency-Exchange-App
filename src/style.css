@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes carousel{
+    from{
+        transform: translateX(-38em);
+    }
+    to{
+        transform: translateX(38em);
+    }
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6689cb;
+    .wrapperContainer{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1em;
+        padding-bottom: 2%;
+        background: #3a4982;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        h1{
+            color: #c8c2c2;
+        }
+        .carousel{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            font-size: 1em;
+            border-radius: 10px;
+            background: #252c46;
+            overflow: hidden;
+            color: #ffffff;
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 2.5em;
+                animation: carousel 25s linear infinite;
+                li{
+                    display: flex;
+                }
+            }
+        }
+        .mainContainer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.75em;
+            width: 80%;
+            .main{
+                .currencyConverterWrapper{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 18%;
+                    background: #252c46;
+                    border-radius: 10px;
+                    padding: 2em 10px 2em 10px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    .currenciesContainer{
+                        display: flex;
+                        gap: 3em;
+                        .currencies{
+                            display: flex;
+                            select{
+                                width: 4em;
+                                font-size: 1em;
+                                height: 34px;
+                            }
+                            input{
+                                width: 150px;
+                                height: 26px;
+                                font-size: 1em;
+                                padding: 2px;
+                            }
+                        }
+                        button{
+                            border: 1px solid gray;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                    .exchangeContainer{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        button{
+                            margin-top: 1em;
+                        }
+                    }
+                }
+                .popularCurrenciesWrapper{
+                    display: flex;
+                    margin-top: 22.5%;
+                    gap: 5px;
+                    .popularCurrenciesContainer{
+                        display: flex;
+                        background: #252c46;
+                        color: #ccc8c8;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                        .symbol{
+                            font-size: 2.55em;
+                            margin: 1px;
+                        }
+                        .column{
+                            display: flex;
+                            flex-direction: column;
+                            .row{
+                                display: flex;
+                                font-size: 2.15em;
+                            }
+                            p{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+            .aside{
+                .newsWrapper{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.65em;
+                }
+            }
+        }
+    }
+}
